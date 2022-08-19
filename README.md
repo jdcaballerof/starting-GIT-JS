@@ -1,3 +1,5 @@
 # starting-GIT-JS
 Primeros pasos con GIT y JS
-Este es un documento del tipo md (mark down)
+<br>Este es un documento del tipo md (mark down) 
+\
+Dos formas de agregar saltos de linea (usar <br>)
