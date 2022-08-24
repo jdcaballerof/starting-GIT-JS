@@ -1,4 +1,4 @@
-# starting-GIT-JS
+# starting-GIT-JS branch2
 Primeros pasos con GIT y JS
 <br>Este es un documento del tipo md (mark down) 
 \
