@@ -1,0 +1,46 @@
+body{
+    background-color: rgb(101, 5, 94); /*rgb(20, 24, 37)*/ 
+    color: whitesmoke;
+    padding-bottom: 80rem;
+}
+
+h2{
+    text-align: center;
+}
+
+table{
+    background-color: white;
+    color: black; 
+    
+    margin: 20px;
+    
+    border: 5px solid rgb(0, 181, 217);
+    border-collapse: collapse;
+}
+
+th, td{
+    padding: 25px 55px;         /* primer numero es para up-down segundo para los lados */
+    border: 1px solid black;
+}
+
+th{
+    padding: 8px;
+    font-size: 20px;
+}
+th:hover{
+    background-color: rgb(224, 149, 10);
+    color: whitesmoke;
+    padding: 0px;
+    font-size: 28px;
+}
+
+label{
+    font-size: 1.75rem;
+}
+
+input + ul {
+    display: none;
+  }
+  input:checked + ul {
+    display: block;
+  }

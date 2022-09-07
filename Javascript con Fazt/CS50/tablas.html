@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <h2>Tabla</h2>
+    <table>
+        <thead>
+            <tr>
+            <th class="letras">A</th>
+            <th>B</th>
+            <th>C</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td>table row 1 data 1</td>
+            <td>table row 1 data 2</td>
+            <td>table row 1 data 3</td>
+            </tr>
+            <tr>
+            <td>table row 2 data 1</td>
+            <td>table row 2 data 2</td>
+            <td>table row 2 data 3</td>
+            </tr>
+            <tr>
+            <td>table row 3 data 1</td>
+            <td>table row 3 data 2</td>
+            <td>table row 3 data 3</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Formularios</h2>
+    <form>
+        <input type="text" placeholder="Nombre completo" name="fullName">
+        <input type="password" placeholder="Cree contraseña" name="contraseña">
+        <input type="submit">
+
+        <h3>Seleccione la comida que le disguste</h3>
+        <input type="radio" value="vegetales"> Vegetales raros
+        <input type="radio" value="chile"> Picante
+        <input type="radio" value="cremas"> Cremas
+        <h3>Rango de edad</h3>
+        <input type="radio" name="age" value="0-18"> Menor de edad
+        <input type="radio" name="age" value="18-60"> Mayor de edad
+        <input type="radio" name="age" value="61">Tercera edad
+        <!-- colocando el mismo nombre solo se puede seleccionar una opción -->
+        <br/>       <!-- Es igual con o sin "/" -->
+        <br>
+        <h3>Color favorito</h3>
+        <input list="colores" placeholder="color" name="color">
+        <br>
+        <input type="submit" value="Manda">
+
+
+        <datalist id="colores">
+            <option value="rojo"></option>
+            <option value="amarillo"></option>
+            <option value="azul"></option>
+            <option value="verde"></option>
+            <option value="naranja"></option>
+            <option value="morado"></option>
+        </datalist>
+
+    </form>
+
+    <form> <!--Mostrar/esconder elementos con un check box-->
+        <label for="controlador">Haz clic en el checkbox</label>
+        <input id="controlador" type="checkbox" />
+        <ul>
+            <li>Holaaaa</li>
+            <li><img src="https://ei.phncdn.com/pics/albums/069/526/232/797636222/(m=e-yaaGqaa)(mh=SnVeQ0KuuA7dQPSa)original_797636222.jpg" alt="hi" width="200px"></li>
+            <li><video src="D:\katar\Descargas\girls.mp4" loop controls></video> </li>
+        </ul>
+    </form>
+
+
+    
+</body>
+</html>

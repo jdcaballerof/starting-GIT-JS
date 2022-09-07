@@ -1,0 +1,57 @@
+*{
+    box-sizing: border-box; /*hace que el padding y el border pasen a formar parte del cálculo del ancho de la caja (width: ##px;) y NO lo suman posteriormente.*/
+    margin: 10px;
+    padding: 0;
+    /*word-wrap: break-word;  Arregla el desbordamiento de SIDEBAR*/
+}
+
+html{
+    height: 100%;   /*Asi el body ocupa el 100% (part1)*/
+}
+
+body{
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-size: 1rem;
+    text-align: justify;
+    min-height: 100%; /*Asi el body ocupa el 100% (part2)*/
+}
+
+
+.general{
+    border: 3px solid greenyellow;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items:stretch;
+    max-width: 100vw;
+    max-height: auto;
+
+}
+
+.general > div{     /*con .general > * {afecta a todo} */
+    margin: 2px;
+    border: 2px solid grey; 
+    height: auto; 
+    width:15rem; 
+    flex:auto; 
+}
+
+#small{
+    flex-grow: .5;
+}
+
+#large{
+    flex-grow: 5;
+}
+
+img{
+    margin: 0;
+    min-width:10em;
+    max-width: 100%;
+    height: auto;
+}
+

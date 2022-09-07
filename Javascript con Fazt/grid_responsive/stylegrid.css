@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box; /*hace que el padding y el border pasen a formar parte del cálculo del ancho de la caja (width: ##px;) y NO lo suman posteriormente.*/
+    margin: 10px;
+    padding: 0;
+    /*word-wrap: break-word;  Arregla el desbordamiento de SIDEBAR*/
+}
+
+html{
+    height: 100%;   /*Asi el body ocupa el 100% (part1)*/
+}
+
+body{
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-size: 1rem;
+    min-height: 100%; /*Asi el body ocupa el 100% (part2)*/
+}
+
+
+.general{
+    border: 3px solid greenyellow;
+    margin: 10px;
+    display: grid;
+    grid-auto-rows: 5rem; 
+    grid-template-columns: repeat(auto-fit, minmax(min(10rem,100%),1fr)); /*auto-fit rellena la primer fila; auto-fill mantiene los tamaños y deja hueco en la primer fila si los elementos no acompletan*/
+    grid-auto-flow:dense;
+
+}
+
+.general > div{     /*con .general > * {afecta a todo} */
+    border: 2px solid white;    
+}
+
+.large{
+    grid-column: span 2;
+}

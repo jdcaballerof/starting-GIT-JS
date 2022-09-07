@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: darkgoldenrod;
+    color: white;
+    padding-bottom: 75em;    /*Crear espacio vacio para scrollear*/
+}
+
+h2{
+    font-weight: 700;   /*letra delgada, normal o en negritras (rango aceptable entre 100-1000, +100)*/
+    font-size: 4rem;
+}
+
+
+p{
+    margin: 2rem 0; /* primero es para up-down segundo para laterales*/
+    padding: 0 1em;
+}
+
+
+a{
+    font-size: 1.25rem;
+    color: white;
+    border: 2px solid white;
+    margin: 0 5rem;
+    padding: .6em 3.5em;  
+    text-decoration: none;
+    border-radius: 100px; 
+    transition: .5s; /*Transicion al hover*/
+}
+a:hover{
+    background-color: white;
+    color: black;
+}
+
+.banner{    /*Imagen de fondo*/
+    width: 100%;
+    height: 100vh; /*cambiar a auto*/
+    object-fit: contain;
+    display: flex;
+    align-items: center;
+    background: right fixed url(https://cdn.pixabay.com/photo/2016/10/03/20/51/girl-1712825_960_720.jpg);
+    background-position-x: 0rem; /*La pone centrada a la derecha siempre que se puede supongo*/
+
+    background-size:cover; /*Redimensionar la imagen para que cubra todo (agrandar)*/
+
+
+}
+
+.banner_descripcion{
+    margin: 0 2.5rem;
+}
+
+.banner2{
+    justify-content: flex-end;
+
+    background-color: white;
+    background-image: url(https://cdn.pixabay.com/photo/2016/10/15/02/35/girl-in-overalls-1741733_960_720.jpg);
+    background-position: -22rem -10rem;
+    background-repeat: no-repeat;           /*No repetir la imagen al moverla*/
+
+
+}
+
+.banner2 *{
+    color: black;
+    border-color: black;
+}
+
+.banner2 a:hover{
+    background-color: black;
+    color: white;
+}
+
+.banner3{
+    background-image: url(https://cdn.pixabay.com/photo/2016/07/13/16/00/box-1514845_960_720.jpg);
+    background-position: -18rem 0rem;
+
+}
+.banner3 > .banner_descripcion{
+    height: 220px;
+    padding: 12px;
+    border-radius: 0 15px;
+    background-color: rgba(0, 0, 0, 0.65);
+    background-size: 120%;
+    box-shadow: 0 0 60px rgb(76, 76, 76);
+}
+
+
+.banner4{
+    justify-content: flex-start;
+
+    background-image: url(https://cdn.pixabay.com/photo/2015/06/19/09/39/lonely-814631_960_720.jpg);
+    background-position: center 0rem;
+
+}
+.banner4 > .banner_descripcion{
+    height: 220px;
+    padding: 12px;
+    border-radius: 0 15px;
+    background-color: rgba(255, 255, 255, 0.65);
+    background-size: 120%;
+    box-shadow: 0 0 20px white;
+}
+
+
+

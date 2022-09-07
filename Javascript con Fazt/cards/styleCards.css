@@ -1,0 +1,138 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    margin: 20px;
+    min-height: 100%;
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+    padding-bottom: 70rem;
+}
+
+
+.contenedor{
+    border: 5px solid yellowgreen;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(12rem,100%),1fr));
+}
+
+.card{
+    border: 2px greenyellow;
+    border-style:dashed;
+    margin: 5px;
+    min-height: 7rem;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+.card2{
+    margin: 5px;
+    min-height: 12rem;
+    background: var(--i);
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden;
+}
+
+.texto{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: .75s;
+}
+.card2:hover .texto{
+    opacity: 1;
+}
+.texto h3,p,a{
+    margin: 10px 0;
+}
+.texto > h3{
+    color: aqua;
+}
+.texto > p{
+    color: white;
+    text-align: center;
+}
+.texto > a{
+    color: yellowgreen;
+}
+
+
+@media (min-width: 700px){
+    .contenedor{
+        /* border: 5px solid red; */
+        grid-template-columns: repeat(3, minmax(min(10rem,100%),1fr));
+
+    }
+
+}
+
+@media (min-width: 900px){
+
+    body{
+        margin: 0px;
+    }
+
+    h1{
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .pag1{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .i1{ /*grid-area: card1;*/
+        grid-area: card1;
+    }
+    .i2{
+        grid-area: card2;
+    }
+    .i3{
+        grid-area: card3;
+    }
+    .i4{
+        grid-area: card4;
+    }
+    .i5{
+        grid-area: card5;
+    }
+    .i6{ /* grid-area: card6; */
+        grid-area: card6;
+    }
+
+    .contenedor{
+        /* border: 5px solid red; */
+        border: none;
+        grid-template:
+        "card1 card2  card2"   1fr
+        "card3 card3  card4"   1fr
+        "card5 card6  card6"   1fr /
+         1fr    1fr     1fr;
+        ;
+        overflow: hidden;
+        height: 100%;       /*Con esta o la siguiente liena es igual*/
+        /* flex: 1; */
+        /* gap: 5px;
+        margin:00px 10px; */
+    }
+
+
+
+}

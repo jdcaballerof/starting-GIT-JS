@@ -1,0 +1,136 @@
+/* 1) Se define un estilo base (basico)*/
+*{
+    box-sizing: border-box; /*hace que el padding y el border pasen a formar parte del cálculo del ancho de la caja (width: ##px;) y NO lo suman posteriormente.*/
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;  /*Arregla el desbordamiento de SIDEBAR*/
+}
+
+html{
+    height: 100%;   /*Asi el body ocupa el 100% (part1)*/
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-size: 1rem;
+    min-height: 100%; /*Asi el body ocupa el 100% (part2)*/
+}
+
+header{
+    display: flex;
+    column-gap: 1.5rem;
+}
+
+p {
+    text-align: justify;
+    margin: .5rem 0rem;
+}
+
+article p:first-of-type {
+    font-size: 150%;
+    font-weight: bold;
+    color: greenyellow;
+}  
+header p:first-of-type::first-letter {
+    text-transform:capitalize;
+    font-size: 150%;
+    font-weight: bold;
+    color: greenyellow;
+}  
+
+
+.grid-container > *{            /*El selector «mayor qué» (símbolo «>») es utilizado en CSS para seleccionar todos los elementos que sean directamente descendientes de otro, es decir, que sean hijos directos de un determinado elemento padre*/   /*Selecciona 'Todo' descendiente de .grid-container*/ 
+/*Saber mas: https://cybmeta.com/el-selector-css-o-mayor-que#:~:text=El%20selector%20%C2%ABmayor%20qu%C3%A9%C2%BB%20(,como%20%C2%ABselector%20de%20hijos%C2%AB.*/
+    border: 2px solid black;    /* 1.2) para que se miren los contenedores*/
+    border-radius: 4px;
+    padding: 0.8rem;
+/*  margin: 10px 0px;   se utiliza mejor un gap en .grid-container*/
+}
+
+.navbar{    /* 2.1) Se define a cada espacio su nombre de area que ocupará */
+    grid-area: navbar;
+}
+
+.header{    /* 2.1) Se define a cada espacio su nombre de area que ocupará */
+    grid-area: header;
+}
+
+.main{    /* 2.1) Se define a cada espacio su nombre de area que ocupará */
+    grid-area: main;
+}
+
+.footer{    /* 2.1) Se define a cada espacio su nombre de area que ocupará */
+    grid-area: footer;
+}
+
+.sidebar{    /* 2.1) Se define a cada espacio su nombre de area que ocupará */
+    grid-area: sidebar;
+}
+
+.grid-container{
+    display: grid;      /* 2) todos los elementos dentro ahora son elementos grid*/
+    gap: 10px;  /*solo seprará a los elementos grid*/
+    grid-template-areas:    /*2.2) Se definen las posiciones que tendra cada area, reacomodandolas */
+        "header"
+        "navbar"
+        "main"
+        "sidebar"
+        "footer";
+/* 2.3) Especificar en tamaño de las columnas y filas */
+    grid-template-rows: 25vh 10% auto auto 15vh;
+}
+
+img{
+    width: 80vw;
+}
+
+@media (min-width: 600px){      /* 3) ajustar para tablet con mediaquery*/
+    .grid-container{
+        background-color: gray;
+        grid-template-areas: 
+            "header header"     /*si se sustituye un nombre por un punto se deja en blanco dicho espacio (ej: quitar un header y pon .)*/
+            "navbar navbar"
+            "sidebar main"
+            "footer footer";
+/* 3.1) Especificar en tamaño de las columnas y filas */
+        grid-template-columns: 200px auto;
+        grid-template-rows: 100px 50px auto 100px;
+    }
+
+    img{
+        width: 100%;
+    }
+
+
+}
+
+@media (min-width: 900px){      /* 4) ajustar para PC con mediaquery*/
+    .grid-container{
+        background-color: black;
+        color: white;
+        border: 5px solid aqua; 
+        padding: 10px;
+        
+/*tambien se puede especificar los tamaños de rows y columns asi (ojo con que es solo 'grid-template' y la diagonal '/' en la penultima linea) */
+        grid-template: 
+            "header header  header"   100px  
+            "navbar main  sidebar"  auto
+            "footer footer  footer"   100px / 
+            200px  auto    200px;
+        /*Al parecer no se puede duplicar secciones*/
+    }
+
+    .grid-container > *{            
+            border: 2px solid yellowgreen;    
+            border-radius: 4px;
+            padding: 0.8rem;
+        /*  margin: 10px;   se utiliza mejor un padding en .grid-container*/
+        }
+
+        img{
+            width: 100%;
+        }
+
+
+}
